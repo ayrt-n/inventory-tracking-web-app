@@ -11,6 +11,18 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-start">
+        <div class="navbar-brand"><%= link_to "Home", root_path, class: "navbar-item" %></div>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <%= link_to "Add Inventory", new_inventory_path, class: "button is-primary" %>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container"><%= yield %></div>
   </body>
 </html>
