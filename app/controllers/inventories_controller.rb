@@ -38,6 +38,8 @@ class InventoriesController < ApplicationController
   def destroy
     @inventory = Inventory.find(params[:id])
     @inventory.destroy
+
+    redirect_to inventories_path
   end
 
   private
