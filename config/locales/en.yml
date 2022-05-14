@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    attributes:
+      inventory:
+        sku: "SKU"
+        name: "Name"
+        description: "Description"
+        stock: "Quantity"
