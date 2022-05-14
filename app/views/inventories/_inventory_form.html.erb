@@ -1,4 +1,7 @@
 <%= form_with model: @inventory do |form| %>
+  <% if @inventory.errors.any? %>
+    <%= render 'error_message', inventory: @inventory %>
+  <% end %>
   <div class="field">
     <%= form.label :sku, class: "label" %>
     <div class="control">
