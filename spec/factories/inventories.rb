@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :inventory do
-    name { "MyString" }
-    description { "MyText" }
-    stock { 1 }
+    sku { Faker::Invoice.reference }
+    name { Faker::Commerce.product_name.upcase }
+    quantity { Faker::Number.between(from: 20, to: 100) }
   end
 end
