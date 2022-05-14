@@ -43,6 +43,6 @@ class InventoriesController < ApplicationController
   private
 
   def inventory_params
-    params.require(:inventory).permit(:name, :description, :stock)
+    params.require(:inventory).permit(:sku, :name, :stock)
   end
 end
