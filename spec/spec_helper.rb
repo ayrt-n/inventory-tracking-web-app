@@ -92,8 +92,3 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
-
-# Configure RSpec to include FactoryBot syntax helpers
-RSpec.configure do |config|
-  config.include FactoryBot::Syntax::Methods
-end
