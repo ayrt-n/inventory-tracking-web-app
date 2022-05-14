@@ -1,5 +1,5 @@
 <tr>
-  <td><%= inventory.sku %></td>
+  <td><%= link_to inventory.sku, inventory %></td>
   <td><%= inventory.name %></td>
   <td><%= inventory.quantity %></td>
   <td><%= link_to "Edit", edit_inventory_path(inventory) %></td>
