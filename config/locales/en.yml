@@ -37,4 +37,4 @@ en:
         sku: "SKU"
         name: "Name"
         description: "Description"
-        stock: "Quantity"
+        quantity: "Quantity"

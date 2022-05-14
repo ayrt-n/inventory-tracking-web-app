@@ -8,6 +8,6 @@
 
 Inventory.destroy_all
 
-Inventory.create(sku: 'A2A1N-GBBC', name: 'ARRIVAL WOVEN JOGGERS', description: 'Blank for now', stock: 120)
-Inventory.create(sku: 'B2A4F-BBBB', name: 'TRAINING LONG SLEEVE CROP TOP', description: 'Blank for now', stock: 45)
-Inventory.create(sku: 'I1A9U-BBKQ', name: 'ANIMAL PRINT SLING BAG', description: 'Blank for now', stock: 60)
+Inventory.create(sku: 'A2A1N-GBBC', name: 'ARRIVAL WOVEN JOGGERS', description: 'Blank for now', quantity: 120)
+Inventory.create(sku: 'B2A4F-BBBB', name: 'TRAINING LONG SLEEVE CROP TOP', description: 'Blank for now', quantity: 45)
+Inventory.create(sku: 'I1A9U-BBKQ', name: 'ANIMAL PRINT SLING BAG', description: 'Blank for now', quantity: 60)
