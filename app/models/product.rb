@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   validates :name, :sku, :price, presence: true
-  has_one :inventory
+  has_one :inventory, dependent: :destroy
   accepts_nested_attributes_for :inventory
 
   before_create do
