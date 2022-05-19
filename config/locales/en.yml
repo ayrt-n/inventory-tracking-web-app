@@ -33,8 +33,8 @@ en:
   hello: "Hello world"
   activerecord:
     attributes:
-      inventory:
+      product:
         sku: "SKU"
         name: "Name"
-        description: "Description"
+      inventory:
         quantity: "Quantity"
