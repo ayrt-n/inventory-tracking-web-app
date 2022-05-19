@@ -23,6 +23,13 @@ class ShipmentsController < ApplicationController
     end
   end
 
+  def destroy
+    @shipment = Shipment.find(params[:id])
+    @shipment.destroy
+
+    redirect_to shipments_path
+  end
+
   private
 
   def shipment_params
