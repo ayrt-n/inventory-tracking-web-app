@@ -11,9 +11,11 @@
   </head>
 
   <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-start">
-        <div class="navbar-brand"><%= link_to "Home", root_path, class: "navbar-item" %></div>
+    <nav class="navbar mb-5" role="navigation" aria-label="main navigation">
+      <div class="navbar-start ">
+        <%= link_to "Home", root_path, class: "navbar-item" %>
+        <%= link_to "View Inventory", inventories_path, class: "navbar-item" %>
+        <%= link_to "View Shipments", shipments_path, class: "navbar-item" %>
       </div>
       <div class="navbar-end">
         <div class="navbar-item">
