@@ -27,7 +27,7 @@ class ShipmentsController < ApplicationController
     @shipment = Shipment.find(params[:id])
     @shipment.destroy
 
-    redirect_to shipments_path
+    redirect_to shipments_path, status: 303
   end
 
   private
