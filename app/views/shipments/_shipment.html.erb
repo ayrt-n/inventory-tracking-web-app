@@ -1,0 +1,9 @@
+<tr>
+  <td><%= link_to shipment.id, shipment %></td>
+  <td><%= shipment.inventory.product.sku %></td>
+  <td><%= shipment.inventory.product.name %></td>
+  <td><%= shipment.quantity %></td>
+  <td><%= shipment.value %></td>
+  <td><%= link_to "Edit", edit_shipment_path(shipment) %></td>
+  <td><%= link_to "Delete", shipment, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
+</tr>
