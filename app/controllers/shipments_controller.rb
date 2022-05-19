@@ -1,6 +1,6 @@
 class ShipmentsController < ApplicationController
   def index
-    @shipments = Shipment.all
+    @shipments = Shipment.all.includes(inventory: :product)
   end
 
   def new
