@@ -1,6 +1,6 @@
 <tr>
-  <td><%= link_to inventory.sku, inventory %></td>
-  <td><%= inventory.name %></td>
+  <td><%= link_to inventory.product.sku, inventory %></td>
+  <td><%= inventory.product.name %></td>
   <td><%= inventory.quantity %></td>
   <td><%= link_to "Edit", edit_inventory_path(inventory) %></td>
   <td><%= link_to "Delete", inventory, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
