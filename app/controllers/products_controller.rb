@@ -32,7 +32,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product.destroy
 
-    redirect_to inventories_path
+    redirect_to inventories_path, status: 303
   end
 
   private
