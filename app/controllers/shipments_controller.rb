@@ -3,6 +3,10 @@ class ShipmentsController < ApplicationController
     @shipments = Shipment.all.includes(inventory: :product)
   end
 
+  def show
+    @shipment = Shipment.find(params[:id])
+  end
+
   def new
     @inventory_options = Inventory.all.includes(:product).map { |inv| [inv.product.name, inv.id] }
     @shipment = Shipment.new
