@@ -1,5 +1,6 @@
 class Inventory < ApplicationRecord
   belongs_to :product
+  has_many :shipments
 
   before_save do
     self.quantity = self.quantity || 0
