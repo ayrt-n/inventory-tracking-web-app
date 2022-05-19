@@ -4,6 +4,6 @@
   <p><strong><%= Product.human_attribute_name(:price) %>:</strong> <%= @inventory.product.price %></p>
   <p><strong><%= Inventory.human_attribute_name(:quantity) %>:</strong> <%= @inventory.quantity %></p>
   <p><strong><%= Inventory.human_attribute_name(:value) %>:</strong> <%= @inventory.value %></p>
-  <p><%= link_to "Edit", edit_inventory_path(@inventory) %></p>
-  <p><%= link_to "Delete", @inventory, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></p>
+  <p><%= link_to "Edit", edit_product_path(@inventory.product) %></p>
+  <p><%= link_to "Delete", @inventory.product, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></p>
 </div>
