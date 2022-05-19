@@ -1,10 +1,10 @@
 <article class="message is-danger">
   <div class="message-header">
-    <p><%= pluralize(inventory.errors.count, "error") %> prohibited this record from being saved</p>
+    <p><%= pluralize(object.errors.count, "error") %> prohibited this record from being saved</p>
   </div>
   <div class="message-body">
     <ul>
-      <% inventory.errors.full_messages.each do |msg| %>
+      <% object.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
     </ul>
