@@ -1,6 +1,6 @@
 <div class="content">
-  <h3><%= @inventory.name %></h3>
-  <p><strong><%= Inventory.human_attribute_name(:sku) %>:</strong> <%= @inventory.sku %></p>
+  <h3><%= @inventory.product.name %></h3>
+  <p><strong><%= Product.human_attribute_name(:sku) %>:</strong> <%= @inventory.product.sku %></p>
   <p><strong><%= Inventory.human_attribute_name(:quantity) %>:</strong> <%= @inventory.quantity %></p>
   <p><%= link_to "Edit", edit_inventory_path(@inventory) %></p>
   <p><%= link_to "Delete", @inventory, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></p>
