@@ -31,6 +31,8 @@ class ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
+
+    redirect_to inventories_path
   end
 
   private
