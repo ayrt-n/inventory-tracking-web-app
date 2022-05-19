@@ -1,6 +1,6 @@
 class InventoriesController < ApplicationController
   def index
-    @inventories = Inventory.all
+    @inventories = Inventory.all.includes(:product)
   end
 
   def show
