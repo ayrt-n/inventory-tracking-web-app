@@ -18,8 +18,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_16_113032) do
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "products_id"
-    t.index ["products_id"], name: "index_inventories_on_products_id"
+    t.bigint "product_id"
+    t.index ["product_id"], name: "index_inventories_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|
