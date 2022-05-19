@@ -1,0 +1,32 @@
+<%= form_with model: @product do |form| %>
+  <% if @product.errors.any? %>
+    <%= render 'shared/error_message', object: @product %>
+  <% end %>
+  <div class="field">
+    <%= form.label :sku, class: "label" %>
+    <div class="control">
+      <%= form.text_field :sku, class: "input" %>
+    </div>
+  </div>
+  <div class="field">
+    <%= form.label :name, class: "label" %>
+    <div class="control">
+      <%= form.text_field :name, class: "input" %>
+    </div>
+  </div>
+  <div class="field">
+    <%= form.label :price, class: "label" %>
+    <div class="control">
+      <%= form.number_field :price, class: "input", step: 0.01 %>
+    </div>
+  </div>
+  <%= form.fields_for :inventory do |inventory_form| %>
+    <div class="field">
+      <%= inventory_form.label :quantity, class: "label" %>
+      <div class="control">
+        <%= inventory_form.number_field :quantity, class: "input" %>
+      </div>
+    </div>
+  <% end %>
+  <%= form.submit class: "button is-primary" %>
+<% end %>
