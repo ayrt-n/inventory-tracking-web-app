@@ -1,0 +1,20 @@
+<%= form_with model: @shipment do |form| %>
+  <% if @shipment.errors.any? %>
+    <%= render 'shared/error_message', object: @shipment %>
+  <% end %>
+  <div class="field">
+    <%= form.label :inventory_id, "Product", class: "label" %>
+    <div class="control">
+      <div class="select">
+        <%= form.select(:inventory_id, options_for_select(@inventory_options)) %>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <%= form.label :quantity, class: "label" %>
+    <div class="control">
+      <%= form.number_field :quantity, class: "input" %>
+    </div>
+  </div>
+  <%= form.submit class: "button is-primary" %>
+<% end %>
