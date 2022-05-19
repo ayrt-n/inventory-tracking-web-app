@@ -32,11 +32,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_19_145200) do
   end
 
   create_table "shipments", force: :cascade do |t|
-    t.bigint "inventories_id"
+    t.bigint "inventory_id"
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["inventories_id"], name: "index_shipments_on_inventories_id"
+    t.index ["inventory_id"], name: "index_shipments_on_inventory_id"
   end
 
 end
