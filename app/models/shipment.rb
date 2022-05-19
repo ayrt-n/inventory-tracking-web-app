@@ -8,7 +8,7 @@ class Shipment < ApplicationRecord
   before_destroy :add_shipment_to_inventory
 
   def value
-    self.quantity * self.inventory.product.price
+    (self.quantity * self.inventory.product.price).round(2)
   end
 
   private

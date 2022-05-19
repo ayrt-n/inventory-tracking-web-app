@@ -7,6 +7,6 @@ class Inventory < ApplicationRecord
   end
 
   def value
-    self.quantity * self.product.price
+    (self.quantity * self.product.price).round(2)
   end
 end
