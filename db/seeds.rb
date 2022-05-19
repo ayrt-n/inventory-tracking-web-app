@@ -8,6 +8,7 @@
 
 Product.destroy_all
 Inventory.destroy_all
+Shipment.destroy_all
 
 joggers = Product.create(sku: 'A2A1N-GBBC', name: 'ARRIVAL WOVEN JOGGERS', price: 38.00)
 crop_top = Product.create(sku: 'B2A4F-BBBB', name: 'TRAINING LONG SLEEVE CROP TOP', price: 26.00)
