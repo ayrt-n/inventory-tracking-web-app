@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      redirect_to inventories_path
+      redirect_to @product.inventory
     else
       render :new, status: :unprocessable_entity
     end
@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
 
     if @product.update(product_params)
-      redirect_to inventories_path
+      redirect_to @product.inventory
     else
       render :edit, status: :unprocessable_entity
     end
