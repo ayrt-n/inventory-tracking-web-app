@@ -1,0 +1,9 @@
+<%= form_with url: new_shipment_path, method: :get, class: "mb-5" do |form|  %>
+  <div class="field">
+    <%= form.label "Number of items:", class: "label" %>
+    <div class="select">
+      <%= form.select :number_of_items, options_for_select((1..@number_of_products)) %>
+    </div>
+    <%= form.submit "Generate Shipment Form", class: "button is-primary" %>
+  </div>
+<% end %>
