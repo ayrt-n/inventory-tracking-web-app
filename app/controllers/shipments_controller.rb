@@ -38,6 +38,6 @@ class ShipmentsController < ApplicationController
   private
 
   def shipment_params
-    params.require(:shipment).permit(shipment_items_attributes: [:id, :product_id, :quantity])
+    params.require(:shipment).permit(:customer_name, shipment_items_attributes: [:id, :product_id, :quantity])
   end
 end
