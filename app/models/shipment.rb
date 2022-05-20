@@ -4,6 +4,8 @@ class Shipment < ApplicationRecord
 
   accepts_nested_attributes_for :shipment_items, allow_destroy: true
 
+  validates :customer_name, presence: true
+
   def value
     100
   end
