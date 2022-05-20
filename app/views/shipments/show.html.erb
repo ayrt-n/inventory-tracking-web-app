@@ -10,6 +10,13 @@
         <th>Value</th>
       </tr>
     </thead>
+    <tfoot>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th><%= number_to_currency(@shipment.value) %></th>
+    </tfoot>
     <tbody>
       <%= render @shipment.shipment_items %>
     </tbody>
