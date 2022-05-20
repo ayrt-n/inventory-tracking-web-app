@@ -2,24 +2,24 @@ require 'rails_helper'
 
 RSpec.describe 'Updating product', type: :system do
   scenario 'valid inputs' do
-    product = create(:product_with_inventory)
+    product = create(:product)
     visit edit_product_path(product)
 
     fill_in 'SKU', with: 'New SKU'
-    fill_in 'Name', with: 'New name'
-    fill_in 'Price', with: 999.99
-    fill_in 'Quantity', with: 999_999_999
+    fill_in 'Name', with: 'NEW NAME'
+    fill_in 'Price', with: 0
+    fill_in 'Quantity', with: 0
     click_on 'Update Product'
 
     expect(page).to have_content('New SKU')
-    expect(page).to have_content('New name')
-    expect(page).to have_content('999.99')
-    expect(page).to have_content('999999999')
+    expect(page).to have_content('NEW NAME')
+    expect(page).to have_content('Price: $0.00')
+    expect(page).to have_content('Quantity: 0')
   end
 
   feature 'invalid inputs' do
     scenario 'empty values' do
-      product = create(:product_with_inventory)
+      product = create(:product)
       visit edit_product_path(product)
 
       fill_in 'SKU', with: ''
@@ -34,8 +34,8 @@ RSpec.describe 'Updating product', type: :system do
     end
 
     scenario 'duplicate skus' do
-      product1 = create(:product_with_inventory)
-      product2 = create(:product_with_inventory)
+      product1 = create(:product)
+      product2 = create(:product)
       visit edit_product_path(product2)
 
       fill_in 'SKU', with: product1.sku

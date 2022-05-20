@@ -30,13 +30,13 @@ RSpec.describe 'Creating product', type: :system do
     end
 
     scenario 'duplicate skus' do
-      product = create(:product_with_inventory)
+      product = create(:product)
 
       visit new_product_path
       fill_in 'SKU', with: product.sku
       fill_in 'Name', with: product.name
       fill_in 'Price', with: product.price
-      fill_in 'Quantity', with: product.inventory.quantity
+      fill_in 'Quantity', with: product.quantity
       click_on 'Create Product'
 
       expect(page).to have_content('SKU has already been taken')
