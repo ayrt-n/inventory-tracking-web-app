@@ -2,7 +2,7 @@
   <div class="field">
     <%= form.label "Number of items:", class: "label" %>
     <div class="select">
-      <%= form.select :number_of_items, options_for_select((1..@number_of_products)) %>
+      <%= form.select :number_of_items, options_for_select((1..number_of_products)) %>
     </div>
     <%= form.submit "Generate Shipment Form", class: "button is-primary" %>
   </div>
