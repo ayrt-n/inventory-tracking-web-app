@@ -1,6 +1,6 @@
 class ShipmentsController < ApplicationController
   def index
-    @shipments = Shipment.all.order('updated_at DESC').includes(inventory: :product)
+    @shipments = Shipment.all.order('updated_at DESC').includes(:product)
   end
 
   def show
@@ -8,7 +8,7 @@ class ShipmentsController < ApplicationController
   end
 
   def new
-    @inventory_options = Inventory.all.includes(:product).order('products.name').map { |inv| [inv.product.name, inv.id] }
+    @product_options = Product.all.order('name').map { |p| [p.name, p.id] }
     @shipment = Shipment.new
   end
 
@@ -16,9 +16,9 @@ class ShipmentsController < ApplicationController
     @shipment = Shipment.new(shipment_params)
 
     if @shipment.save
-      redirect_to inventories_path
+      redirect_to shipments_path
     else
-      @inventory_options = Inventory.all.includes(:product).order('products.name').map { |inv| [inv.product.name, inv.id] }
+      @product_options = Product.all.order('name').map { |p| [p.name, p.id] }
       render :new, status: :unprocessable_entity
     end
   end
@@ -33,6 +33,6 @@ class ShipmentsController < ApplicationController
   private
 
   def shipment_params
-    params.require(:shipment).permit(:inventory_id, :quantity)
+    params.require(:shipment).permit(:product_id, :quantity)
   end
 end
