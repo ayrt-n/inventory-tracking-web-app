@@ -1,6 +1,6 @@
 class ShipmentsController < ApplicationController
   def index
-    @shipments = Shipment.all.order('updated_at DESC').includes(:product)
+    @shipments = Shipment.all.order('updated_at DESC')
   end
 
   def show
@@ -13,7 +13,8 @@ class ShipmentsController < ApplicationController
   end
 
   def create
-    @shipment = Shipment.new(shipment_params)
+    @shipment = Shipment.new
+    @shipment.shipment_items.build(shipment_params)
 
     if @shipment.save
       redirect_to shipments_path

@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
   validates :name, :sku, :price, presence: true
   validates :sku, uniqueness: true
-  has_many :shipments
+  has_many :shipment_items
 
   before_save do
     self.name = self.name.upcase
