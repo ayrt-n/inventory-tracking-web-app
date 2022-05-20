@@ -23,6 +23,7 @@ class ShipmentsController < ApplicationController
       redirect_to shipments_path
     else
       @product_options = Product.all.order('name').map { |p| [p.name, p.id] }
+      @number_of_products = Product.count
       render :new, status: :unprocessable_entity
     end
   end
