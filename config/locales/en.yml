@@ -37,6 +37,9 @@ en:
         sku: "SKU"
         name: "Name"
         price: "Price"
-      inventory:
         quantity: "Quantity"
         value: "Value"
+      shipment:
+        quantity: "Quantity"
+        value: "Value"
+        
