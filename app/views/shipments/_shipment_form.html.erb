@@ -2,19 +2,21 @@
   <% if @shipment.errors.any? %>
     <%= render 'shared/error_message', object: @shipment %>
   <% end %>
-  <div class="field">
-    <%= form.label :product_id, "Product", class: "label" %>
-    <div class="control">
-      <div class="select">
-        <%= form.select(:product_id, options_for_select(@product_options)) %>
+  <%= form.fields_for :shipment_items do |item_form| %>
+    <div class="field">
+      <%= item_form.label :product_id, "Product", class: "label" %>
+      <div class="control">
+        <div class="select">
+          <%= item_form.select(:product_id, options_for_select(@product_options)) %>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="field">
-    <%= form.label :quantity, class: "label" %>
-    <div class="control">
-      <%= form.number_field :quantity, class: "input" %>
+    <div class="field">
+      <%= item_form.label :quantity, class: "label" %>
+      <div class="control">
+        <%= item_form.number_field :quantity, class: "input" %>
+      </div>
     </div>
-  </div>
+  <% end %>
   <%= form.submit class: "button is-primary" %>
 <% end %>
