@@ -4,7 +4,6 @@ class ShipmentItem < ApplicationRecord
 
   validates :quantity, numericality: { greater_than: 0 }
   validate :check_sufficient_inventory
-  validates :quantity, presence: true
 
   before_save :remove_shipment_from_inventory
   before_destroy :add_shipment_to_inventory
