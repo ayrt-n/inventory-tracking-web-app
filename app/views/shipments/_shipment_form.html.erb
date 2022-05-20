@@ -2,6 +2,12 @@
   <% if @shipment.errors.any? %>
     <%= render 'shared/error_message', object: @shipment %>
   <% end %>
+  <div class="field">
+    <%= form.label :customer_name, class: "label" %>
+    <div class="control">
+      <%= form.text_field :customer_name, class: "input" %>
+    </div>
+  </div>
   <%= form.fields_for :shipment_items do |item_form| %>
     <div class="field">
       <%= item_form.label :product_id, "Product", class: "label" %>
