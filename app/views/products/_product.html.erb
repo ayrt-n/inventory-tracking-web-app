@@ -1,0 +1,7 @@
+<tr>
+  <td><%= link_to product.sku, product %></td>
+  <td><%= product.name %></td>
+  <td><%= product.quantity %></td>
+  <td><%= link_to "Edit", edit_product_path(product) %></td>
+  <td><%= link_to "Delete", product, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
+</tr>

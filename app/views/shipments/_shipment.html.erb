@@ -1,7 +1,7 @@
 <tr>
   <td><%= link_to shipment.id, shipment %></td>
-  <td><%= shipment.inventory.product.sku %></td>
-  <td><%= shipment.inventory.product.name %></td>
+  <td><%= shipment.product.sku %></td>
+  <td><%= shipment.product.name %></td>
   <td><%= shipment.quantity %></td>
   <td><%= number_to_currency(shipment.value) %></td>
   <td><%= link_to "Edit", edit_shipment_path(shipment) %></td>

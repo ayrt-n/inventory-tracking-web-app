@@ -1,11 +1,11 @@
 <div class="content">
   <h3>Shipment ID: <%= @shipment.id %></h3>
-  <p><strong><%= Product.human_attribute_name(:sku) %>:</strong> <%= @shipment.inventory.product.sku %></p>
-  <p><strong><%= Product.human_attribute_name(:name) %>:</strong> <%= @shipment.inventory.product.sku %></p>
-  <p><strong><%= Inventory.human_attribute_name(:quantity) %>:</strong> <%= @shipment.quantity %></p>
-  <p><strong><%= Inventory.human_attribute_name(:value) %>:</strong> <%= number_to_currency(@shipment.value) %></p>
-  <p><strong><%= Inventory.human_attribute_name(:created_at) %>:</strong> <%= @shipment.created_at %></p>
-  <p><strong><%= Inventory.human_attribute_name(:updated_at) %>:</strong> <%= @shipment.updated_at %></p>
+  <p><strong><%= Product.human_attribute_name(:sku) %>:</strong> <%= @shipment.product.sku %></p>
+  <p><strong><%= Product.human_attribute_name(:name) %>:</strong> <%= @shipment.product.name %></p>
+  <p><strong><%= Shipment.human_attribute_name(:quantity) %>:</strong> <%= @shipment.quantity %></p>
+  <p><strong><%= Shipment.human_attribute_name(:value) %>:</strong> <%= number_to_currency(@shipment.value) %></p>
+  <p><strong><%= Shipment.human_attribute_name(:created_at) %>:</strong> <%= @shipment.created_at %></p>
+  <p><strong><%= Shipment.human_attribute_name(:updated_at) %>:</strong> <%= @shipment.updated_at %></p>
   <p><%= link_to "Edit", edit_shipment_path(@shipment) %></p>
   <p><%= link_to "Delete", @shipment, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></p>
 </div>

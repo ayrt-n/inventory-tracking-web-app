@@ -1,0 +1,9 @@
+<div class="content">
+  <h3><%= @product.name %></h3>
+  <p><strong><%= Product.human_attribute_name(:sku) %>:</strong> <%= @product.sku %></p>
+  <p><strong><%= Product.human_attribute_name(:price) %>:</strong> <%= number_to_currency(@product.price) %></p>
+  <p><strong><%= Product.human_attribute_name(:quantity) %>:</strong> <%= @product.quantity %></p>
+  <p><strong><%= Product.human_attribute_name(:value) %>:</strong> <%= number_to_currency(@product.value) %></p>
+  <p><%= link_to "Edit", edit_product_path(@product) %></p>
+  <p><%= link_to "Delete", @product, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></p>
+</div>

@@ -3,10 +3,10 @@
     <%= render 'shared/error_message', object: @shipment %>
   <% end %>
   <div class="field">
-    <%= form.label :inventory_id, "Product", class: "label" %>
+    <%= form.label :product_id, "Product", class: "label" %>
     <div class="control">
       <div class="select">
-        <%= form.select(:inventory_id, options_for_select(@inventory_options)) %>
+        <%= form.select(:product_id, options_for_select(@product_options)) %>
       </div>
     </div>
   </div>

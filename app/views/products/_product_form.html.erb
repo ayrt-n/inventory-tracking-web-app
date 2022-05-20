@@ -20,13 +20,11 @@
       <%= form.number_field :price, class: "input", step: 0.01 %>
     </div>
   </div>
-  <%= form.fields_for :inventory do |inventory_form| %>
-    <div class="field">
-      <%= inventory_form.label :quantity, class: "label" %>
-      <div class="control">
-        <%= inventory_form.number_field :quantity, class: "input" %>
-      </div>
+  <div class="field">
+    <%= form.label :quantity, class: "label" %>
+    <div class="control">
+      <%= form.number_field :quantity, class: "input" %>
     </div>
-  <% end %>
+  </div>
   <%= form.submit class: "button is-primary" %>
 <% end %>
