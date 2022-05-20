@@ -7,6 +7,6 @@ class Shipment < ApplicationRecord
   validates :customer_name, presence: true
 
   def value
-    100
+    self.shipment_items.to_a.sum(&:value)
   end
 end
