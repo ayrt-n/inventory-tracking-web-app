@@ -10,11 +10,14 @@ class ShipmentsController < ApplicationController
   def new
     @product_options = Product.all.order('name').map { |p| [p.name, p.id] }
     @shipment = Shipment.new
+    @number_of_products = Product.count
+
+    number_of_items = params[:number_of_items] || 1
+    number_of_items.to_i.times { @shipment.shipment_items.build }
   end
 
   def create
-    @shipment = Shipment.new
-    @shipment.shipment_items.build(shipment_params)
+    @shipment = Shipment.new(shipment_params)
 
     if @shipment.save
       redirect_to shipments_path
@@ -34,6 +37,6 @@ class ShipmentsController < ApplicationController
   private
 
   def shipment_params
-    params.require(:shipment).permit(:product_id, :quantity)
+    params.require(:shipment).permit(shipment_items_attributes: [:id, :product_id, :quantity])
   end
 end
