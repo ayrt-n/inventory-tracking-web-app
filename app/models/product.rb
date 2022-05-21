@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
   validates :name, :sku, :price, presence: true
   validates :sku, uniqueness: true
-  has_many :shipment_items, inverse_of: :product, dependent: :destroy
+  has_many :shipment_items, inverse_of: :product, dependent: :restrict_with_exception
   has_many :shipments, through: :shipment_items
 
   before_save do
