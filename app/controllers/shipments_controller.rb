@@ -20,7 +20,7 @@ class ShipmentsController < ApplicationController
     @shipment = Shipment.new(shipment_params)
 
     if @shipment.save
-      redirect_to shipments_path
+      redirect_to @shipment
     else
       @product_options = Product.all.order('name').map { |p| [p.name, p.id] }
       @number_of_products = Product.count
