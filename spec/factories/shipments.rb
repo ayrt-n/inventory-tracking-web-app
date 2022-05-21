@@ -1,6 +1,5 @@
 FactoryBot.define do
   factory :shipment do
-    product
-    quantity { Faker::Number.between(from: 1, to: 19) }
+    customer_name { Faker::Name.name }
   end
 end
