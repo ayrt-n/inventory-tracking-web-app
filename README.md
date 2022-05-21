@@ -7,9 +7,6 @@
    - [Using Web Browser](#using-web-browser) * RECOMMENDED *
 - [Database Structure](#database-structure)
 - [How to Use](#how-to-use)
-  - [Products](#products)
-  - [Shipments](#shipments)
-- [Next Steps](#next-steps)
 
 ## Problem Requirements
 The initial task was to build an inventory tracking web application for a logistics company which met the following requirements.
