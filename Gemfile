@@ -79,3 +79,6 @@ end
 
 # Fix issue with gem dependencies/net-http and warnings
 gem 'net-http'
+
+# Bye bug for debugging
+gem 'byebug'
