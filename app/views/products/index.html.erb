@@ -1,5 +1,8 @@
 <div class="content">
   <h3>Products</h3>
+  <% if flash[:error] %>
+    <%= render 'shared/flash_error', flash: flash %>
+  <% end %>
   <table class="table">
     <thead>
       <tr>
