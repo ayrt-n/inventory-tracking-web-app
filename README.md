@@ -3,8 +3,8 @@
 ## Table of Contents
 - [Problem Requirements](#problem-requirements)
 - [Set Up](#set-up)
-   - Using Local Machine
-   - Using Replit
+   - [Using Local Machine](#using-local-machine)
+   - [Using Replit](#using-replit) * RECOMMENDED *
 - [Database Structure](#database-structure)
 - [How to Use](#how-to-use)
   - [Products](#products)
@@ -46,7 +46,7 @@ And opening a browser and navigating to:
 ```http://localhost:3000/```
 
 ### Using Replit
-
+Replit provides an easy way to 
 ## Database Structure
 
 ## How to Use
