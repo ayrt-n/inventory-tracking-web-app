@@ -37,9 +37,14 @@ class ProductsController < ApplicationController
 
   def destroy
     @product = Product.find(params[:id])
-    @product.destroy
 
-    redirect_to products_path, status: 303
+    begin 
+      @product.destroy
+      redirect_to products_path, status: 303
+    rescue ActiveRecord::DeleteRestrictionError => e
+      flash[:error] = 'Unable to delete product with an associated shipment'
+      redirect_to products_path
+    end
   end
 
   private
