@@ -3,6 +3,7 @@ class ShipmentItem < ApplicationRecord
   belongs_to :product
 
   validates :quantity, numericality: { greater_than: 0 }
+  validates_uniqueness_of :shipment_id, scope: :product_id
   validate :check_sufficient_inventory
 
   before_save :remove_shipment_from_inventory
@@ -31,7 +32,7 @@ class ShipmentItem < ApplicationRecord
 
   def add_shipment_to_inventory
     return if self.nil?
-    
+
     shipment_amount = self.quantity
     inventory_amount = self.product.quantity
 
