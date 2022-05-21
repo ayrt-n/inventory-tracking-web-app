@@ -77,12 +77,14 @@ When you first open up the application you will be greeted with a list of availa
 
 From there you are able to view more information on individual products by clicking on the SKU, as well as Edit or Delete products using either of the Edit/Delete links. Using the 'Add Product' button on the top right of the screen you are able to add new products.
 
-To create a shipment, simply click on the 'New Shipment' button on the top right of the screen. Clicking the button will redirected to the New Shipment page: 
+To create a shipment, simply click on the 'New Shipment' button on the top right of the screen. Clicking the button will redirect you to the New Shipment page:
 
-On the New Shipment page you are given the option to specify the number of unique items within the order, clicking on the 'Generate Shipment Form' button will create additional form inputs for the additional items.
+![new shipment page](/public/new_shipment_page.png)
 
-Using these fields, you can then select the products you'd like to order from the dropdown menus (populated with your collection of products) and specify the quantity of each. When you are set, click on 'Create Shipment', the inventory will be deducted by the quantity specified and a new shipment will be created.
+On the New Shipment page you are given a dropdown menu to specify the number of unique items within the order, clicking on the 'Generate Shipment Form' button will create additional form inputs for other items, if necessary.
 
-To view all of your shipments and additional details, click on the 'View Shipments' link at the top left of the screen.
+Using these fields, you can then select the products you'd like to order from the dropdown menus (populated with your collection of products) and specify the quantity of each. When you are set, click on 'Create Shipment'. Creating a new shipment will adjust the inventory quantity downward by the amount of products set to be shipped.
+
+To view all of your shipments and additional details, click on the 'View Shipments' link at the top left of the screen. From there you can view additional information on the shipment as well as delete shipments if you'd like. When deleting a shipment, the inventory quantity will be adjusted upward by amount of product within the shipment.
 
 ## Next Steps
