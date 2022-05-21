@@ -1,0 +1,12 @@
+<article class="message is-danger">
+  <div class="message-header">
+    <p>Oops! Something went wrong! </p>
+  </div>
+  <div class="message-body">
+    <ul>
+      <% flash.each do |type, msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+</article>
