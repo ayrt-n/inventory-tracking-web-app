@@ -82,6 +82,6 @@ On the New Shipment page you are given a dropdown menu to specify the number of 
 
 Using these fields, you can then select the products you'd like to order from the dropdown menus (populated with your collection of products) and specify the quantity of each. When you are set, click on 'Create Shipment'. Creating a new shipment will adjust the inventory quantity downward by the amount of products set to be shipped.
 
-To view all of your shipments and additional details, click on the 'View Shipments' link at the top left of the screen. From there you can view additional information on the shipment as well as delete shipments if you'd like. When deleting a shipment, the inventory quantity will be adjusted upward by amount of product within the shipment:
+To view all of your shipments and additional details, click on the 'View Shipments' link at the top left of the screen. From there you can view additional information on the shipment by clicking the shipment id, as well as delete shipments using the delete link. When deleting a shipment, the inventory quantity will be adjusted upward by amount of product within the shipment:
 
 ![shipments_page](/public/shipments-page.png)
